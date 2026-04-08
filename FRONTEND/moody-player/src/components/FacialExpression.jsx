@@ -49,12 +49,10 @@ const FacialExpression = () => {
         setExpression(mood);
 
         console.log("Final Mood:", mood);
-
-        // Fetch songs based on mood
-        const response = await axios.get(
-          `http://localhost:3000/songs?mood=${mood}`
-        );
-        
+// Fetch songs based on mood
+const response = await axios.get(
+  `https://emo-tune-player-1.onrender.com/songs?mood=${mood}`
+);
         // NEW: Update the state with the data from your backend
         setSuggestedSongs(response.data.songs); 
 
